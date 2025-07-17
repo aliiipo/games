@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> - RETOS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  <div id="intro-logo">
+    <h1>Climb for Niggas</h1>
+  </div>
+
+  <div class="container">
+     <h1>🎉 ¡Cumple o Paga! 🎉</h1>
+    <!--<p class="description">
+      Añade a tus amigos, elige la temática y prepárate para retos locos, atrevidos y divertidísimos. ¿Quién será el más valiente del grupo?
+    </p> -->
+
+    <!-- Formulario para nombres -->
+    <div id="setup">
+      <input type="text" id="playerName" placeholder="Introduce tu nombre divertido" />
+      <button class="button-img" onclick="addPlayer()">
+        <img src="assets/img/boton-anadir.png" alt="Añadir jugador" />
+      </button>
+
+      <ul id="playerList"></ul>
+
+      <select id="categorySelect">
+        <option value="divertido">😄 Divertido</option>
+        <option value="picante">🔥 Picante</option>
+        <option value="incómodo">😳 Incómodo</option>
+      </select>
+
+      <button class="button-img" onclick="startGame()">
+        <img src="assets/img/boton-jugar.png" alt="Comenzar juego" />
+      </button>
+    </div>
+
+    <!-- Zona de juego -->
+    <div id="game" style="display: none;">
+      <button onclick="exitToMenu()" class="exit-button">✖</button>
+      <div id="challengeBox">
+        <p id="challengeText"></p>
+      </div>
+      <button class="button-img" onclick="nextChallenge()">
+        <img src="assets/img/boton-siguiente.png" alt="Siguiente reto" />
+      </button>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
